@@ -3,9 +3,7 @@ import Button from "../../components/Button"
 import Input from "../../components/Input"
 import { useNavigate } from 'react-router-dom'
 
-const Form = ({
-    isSignInPage = true,
-}) => {
+const Form = ({isSignInPage = true}) => {
     const [data, setData] = useState({
         ...(!isSignInPage && {
             fullName: ''

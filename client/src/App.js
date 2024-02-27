@@ -48,33 +48,6 @@ function App() {
         } 
       />
     </Routes>
-  
-   {/* <Routes>
-      <Route
-        path="/"
-        element={
-        
-            <Dashboard />
-         
-        }
-      />
-      <Route
-        path="/users/sign_in"
-        element={
-         
-            <Form isSignIn={true} />
-        
-        }
-      />
-       <Route
-        path="/users/sign_up"
-        element={
-        
-            <Form isSignIn={false} />
-        } 
-      />
-    </Routes> */}
-  
     </div>
   );
 }
