@@ -16,7 +16,7 @@ const Dashboard = () => {
 	const messageRef = useRef(null)
 
 	useEffect(() => {
-		setSocket(io('http://localhost:3000'))
+		setSocket(io('http://localhost:8080'))
 	}, [])
 
 	useEffect(() => {
@@ -198,7 +198,7 @@ const Dashboard = () => {
 										<div className='cursor-pointer flex items-center' onClick={() => fetchMessages('new', user)}>
 											<div><img src={itsusers} className="w-[60px] h-[60px] rounded-full p-[2px] " /></div>
 											<div className='ml-6'>
-												<h3 className='text-lg font-semibold'>{user?.fullName}</h3>
+												<h3 className='text-lg font-semibold first-line:w-10'>{user?.fullName}</h3>
 												<p className='text-sm font-light text-gray-600'>{user?.email}</p>
 											</div>
 										</div>
