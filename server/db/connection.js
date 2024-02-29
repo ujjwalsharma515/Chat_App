@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://127.0.0.1:27017/ChatApp1"
+mongoose.connect("mongodb+srv://chatapp_admin:chatapp_admin@cluster0.1jhklwo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 ).then(()=>{
     console.log("connection successful");
