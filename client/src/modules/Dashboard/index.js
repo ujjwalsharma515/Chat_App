@@ -16,7 +16,7 @@ const Dashboard = () => {
 	const messageRef = useRef(null)
 
 	useEffect(() => {
-		setSocket(io('http://localhost:898989'))
+		setSocket(io('http://localhost:process.env.PORT'))
 	}, [])
 
 	useEffect(() => {
