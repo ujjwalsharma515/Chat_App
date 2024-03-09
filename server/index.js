@@ -3,9 +3,10 @@ const dotenv = require('dotenv')
 const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
+const port1 = process.env.PORT;
 const io = require('socket.io')({
     cors: {
-        origin: 'http://localhost:3000',
+        origin: port1,
     }
 });
 
