@@ -19,7 +19,7 @@ const Dashboard = () => {
 	const messageRef = useRef(null)
 
 	useEffect(() => {
-		setSocket(io('https://chat-app-965j.onrender.com'))
+		setSocket(io(window.location.origin))
 	
 
 	
