@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-const dotenv = require('dotenv');
+
 import itsusers from '../../assets/itsusers.jpg'
 import Img1 from '../../assets/img1.jpg'
 import onlineimg from '../../assets/onlineimg.png'
