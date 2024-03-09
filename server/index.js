@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const port1 = process.env.PORT;
 const port2 = process.env.PORT;
-const io = require('socket.io')(port2,{
+const io = require('socket.io')({
     cors: {
         origin: port1,
     }
