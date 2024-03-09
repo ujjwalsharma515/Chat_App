@@ -7,7 +7,7 @@ const port1 = process.env.PORT;
 
 const io = require('socket.io')(process.env.SOCKETIOPORT,{
     cors: {
-        origin: port1,
+        origin: `http://localhost:${port1}`,
     }
 });
 // Connect DB
