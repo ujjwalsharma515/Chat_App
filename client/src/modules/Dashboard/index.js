@@ -19,8 +19,8 @@ const Dashboard = () => {
 	const messageRef = useRef(null)
 
 	useEffect(() => {
-		// setSocket(io('http://localhost:process.env.PORT'))
-		 const client = io();
+		setSocket(io('https://chat-app-965j.onrender.com'))
+	
 
 	
 	}, [])
