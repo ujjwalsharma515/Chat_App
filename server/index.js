@@ -3,7 +3,7 @@ const dotenv = require('dotenv')
 const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
-const io = require('socket.io')({
+const io = require('socket.io')(connect, {
     cors: {
         origin: 'http://localhost:3000',
     }
@@ -16,6 +16,7 @@ require('./db/connection');
 const Users = require('./models/Users');
 const Conversations = require('./models/Conversations');
 const Messages = require('./models/Messages');
+const { connect } = require('mongoose');
 
 // app Use
 const app = express();
