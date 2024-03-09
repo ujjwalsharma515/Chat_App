@@ -10,7 +10,7 @@ const io = require('socket.io')(port2,{
         origin: port1,
     }
 });
-
+module.exports = io;
 // Connect DB
 require('./db/connection');
 

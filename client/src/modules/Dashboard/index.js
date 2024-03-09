@@ -8,6 +8,7 @@ import Input from '../../components/Input'
 import { io } from 'socket.io-client'
 
 
+
 const Dashboard = () => {
 	const [user, setUser] = useState(JSON.parse(localStorage.getItem('user:detail')))
 	const [conversations, setConversations] = useState([])
@@ -19,7 +20,8 @@ const Dashboard = () => {
 
 	useEffect(() => {
 		// setSocket(io('http://localhost:process.env.PORT'))
-		const client = io();
+		 const client = io();
+
 	
 	}, [])
 
