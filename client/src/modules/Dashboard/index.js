@@ -17,7 +17,8 @@ const Dashboard = () => {
 
 	useEffect(() => {
 		// setSocket(io('http://localhost:process.env.PORT'))
-		setSocket(io(connect));
+		// setSocket(io(connect));
+		io.connect();
 	}, [])
 
 	useEffect(() => {
