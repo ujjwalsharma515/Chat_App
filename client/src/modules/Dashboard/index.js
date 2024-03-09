@@ -18,7 +18,8 @@ const Dashboard = () => {
 	const messageRef = useRef(null)
 
 	useEffect(() => {
-		setSocket(io.connect);
+		// setSocket(io.connect);
+		setSocket.io.connect;
 	
 	}, [])
 
