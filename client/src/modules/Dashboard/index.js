@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
+const dotenv = require('dotenv');
 import itsusers from '../../assets/itsusers.jpg'
 import Img1 from '../../assets/img1.jpg'
 import onlineimg from '../../assets/onlineimg.png'
 import itsme from '../../assets/itsme.jpg'
 import Input from '../../components/Input'
 import { io } from 'socket.io-client'
+
 
 const Dashboard = () => {
 	const [user, setUser] = useState(JSON.parse(localStorage.getItem('user:detail')))
@@ -16,9 +18,8 @@ const Dashboard = () => {
 	const messageRef = useRef(null)
 
 	useEffect(() => {
-		// setSocket(io('http://localhost:process.env.PORT'))
-		// setSocket(io(connect));
-		io.connect();
+		setSocket(io(port2))
+	
 	}, [])
 
 	useEffect(() => {

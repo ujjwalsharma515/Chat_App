@@ -4,7 +4,8 @@ const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const port1 = process.env.PORT;
-const io = require('socket.io')({
+const port2 = process.env.PORT;
+const io = require('socket.io')(port2,{
     cors: {
         origin: port1,
     }
