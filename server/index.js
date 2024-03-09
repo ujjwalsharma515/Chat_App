@@ -4,13 +4,12 @@ const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const port1 = process.env.PORT;
-const port2 = process.env.PORT;
-const io = require('socket.io')(window.location.origin,{
+
+const io = require('socket.io')(process.env.SOCKETIOPORT,{
     cors: {
         origin: port1,
     }
 });
-module.exports = io;
 // Connect DB
 require('./db/connection');
 
