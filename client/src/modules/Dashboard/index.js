@@ -123,7 +123,7 @@ const Dashboard = () => {
 							conversations.length > 0 ?
 								conversations.map(({ conversationId, user }) => {
 									return (
-										<div className='flex items-center py-8 border-b border-b-gray-300 cursor-pointer hover:bg-slate-100'>
+										<div className='flex items-center py-8 border-b border-b-gray-300 cursor-pointer hover:bg-slate-300'>
 											<div className='cursor-pointer flex items-center' onClick={() => fetchMessages(conversationId, user)}>
 												<div><img src={Img1} className="w-[60px] h-[60px] rounded-full p-[2px] border border-primary" /></div>
 												<div className='ml-6'>
