@@ -1,11 +1,12 @@
 const express = require('express');
 const dotenv = require('dotenv')
 const bcryptjs = require('bcryptjs');
+const http = require('http');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const port1 = process.env.PORT;
-
-const io = require('socket.io')(process.env.SOCKETIOPORT,{
+const httpServer = http.createServer()
+const io = require('socket.io')(httpServer, {
     cors: {
         origin: `http://localhost:${port1}`,
     }
