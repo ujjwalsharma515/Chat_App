@@ -18,11 +18,8 @@ const Dashboard = () => {
 	const [socket, setSocket] = useState(null)
 	const messageRef = useRef(null)
 
-
-
 	useEffect(() => {
-		setSocket(io(`http://localhost:${port2}`))
-		
+		setSocket(io(`http://localhost:${process.env.SOCKETIOPORT}`))
 	}, [])
 
 	useEffect(() => {
