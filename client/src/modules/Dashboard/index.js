@@ -21,8 +21,7 @@ const Dashboard = () => {
 
 
 	useEffect(() => {
-		const socket1 = io();
-		socket1.connect();
+		setSocket(io(`http://localhost:${port2}`))
 		
 	}, [])
 
