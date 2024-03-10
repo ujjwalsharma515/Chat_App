@@ -21,7 +21,7 @@ const Dashboard = () => {
 
 
 	useEffect(() => {
-		const socket1 = io('https://chat-app-965j.onrender.com', { autoConnect: false });
+		const socket1 = io();
 		socket1.connect();
 		
 	}, [])
