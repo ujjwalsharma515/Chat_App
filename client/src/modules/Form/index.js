@@ -39,7 +39,7 @@ const Form = ({isSignInPage = true}) => {
     <div className="bg-light h-screen flex items-center justify-center">
         <div className=" bg-white w-[600px] h-[800px] shadow-lg rounded-lg flex flex-col justify-center items-center">
             <div className=" text-4xl font-extrabold">Welcome {isSignInPage && 'Back'}</div>
-            <div className=" text-xl font-light mb-4">{isSignInPage ? 'Sign in to get explored' : 'Sign up to get starte'}</div>
+            <div className=" text-xl font-light">{isSignInPage ? 'Sign in to get explored' : 'Sign up to get started'}</div>
             <div className=" font-light mb-14">{isSignInPage ? "": '(Please sign in after sign up)'}</div>
             <form className="flex flex-col items-center w-full" onSubmit={(e) => handleSubmit(e)}>
             { !isSignInPage && <Input label="Full name" name="name" placeholder="Enter your full name" className="mb-6 w-[75%]" value={data.fullName} onChange={(e) => setData({ ...data, fullName: e.target.value }) } /> }
