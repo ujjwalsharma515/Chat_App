@@ -36,6 +36,7 @@ const Form = ({isSignInPage = true}) => {
         }
     }
   return (
+    
     <div className="bg-light h-screen flex items-center justify-center">
         <div className=" bg-white w-[600px] h-[800px] shadow-lg rounded-lg flex flex-col justify-center items-center">
             <div className=" text-4xl font-extrabold">Welcome {isSignInPage && 'Back'}</div>
