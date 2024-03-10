@@ -4,12 +4,21 @@ const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const port1 = process.env.PORT;
-
-const io = require('socket.io')(process.env.SOCKETIOPORT,{
+const http = require("http");
+const server = http.createServer(app);
+const { Server } = require("socket.io");
+const io = new Server(server, {
     cors: {
-        origin: `http://localhost:${port1}`,
+      origin: 'http://localhost:3000',
+      methods:['GET','POST']
     }
-});
+  })
+
+// const io = require('socket.io')(process.env.SOCKETIOPORT,{
+//     cors: {
+//         origin: `http://localhost:${port1}`,
+//     }
+// });
 // Connect DB
 require('./db/connection');
 
