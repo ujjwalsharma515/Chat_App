@@ -36,9 +36,9 @@ const Dashboard = () => {
 		})
 	}, [socket])
 
-	useEffect(() => {
-		messageRef?.current?.scrollIntoView({ behavior: 'smooth' })
-	}, [messages?.messages])
+	// useEffect(() => {
+	// 	messageRef?.current?.scrollIntoView({ behavior: 'smooth' })
+	// }, [messages?.messages])
 
 	useEffect(() => {
 		const loggedInUser = JSON.parse(localStorage.getItem('user:detail'))
