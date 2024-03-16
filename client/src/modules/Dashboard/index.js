@@ -104,7 +104,7 @@ const Dashboard = () => {
 
 	return (
 		<div className='w-screen flex md:grid'>
-			<div className='w-[25%] h-screen bg-secondary overflow-scroll md:w-[100%]'>
+			<div className='w-[25%] h-screen bg-secondary overflow-scroll md:w-[100%] md:min-h-full'>
 				<div className='flex items-center my-8 mx-14'>
 					<div><img src={itsme} width={75} height={75} className='border border-primary p-[2px] rounded-full' /></div>
 					<div className='ml-8'>
@@ -113,7 +113,7 @@ const Dashboard = () => {
 					</div>
 				</div>
 				<hr />
-				<div className='mx-14 mt-10'>
+				<div className='mx-14 mt-10 md:h-[100%]'>
 					<div className='text-primary text-lg'>Messages</div>
 					<div>
 						{
