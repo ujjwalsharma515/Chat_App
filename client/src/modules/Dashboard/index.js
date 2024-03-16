@@ -113,7 +113,7 @@ const Dashboard = () => {
 					</div>
 				</div>
 				<hr />
-				<div className='mx-14 mt-10 md:h-[100%]'>
+				<div className='mx-14 mt-10'>
 					<div className='text-primary text-lg'>Messages</div>
 					<div>
 						{
