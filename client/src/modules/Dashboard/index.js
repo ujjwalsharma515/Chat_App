@@ -36,9 +36,9 @@ const Dashboard = () => {
 		})
 	}, [socket])
 
-	// useEffect(() => {
-	// 	messageRef?.current?.scrollIntoView({ behavior: 'smooth' })
-	// }, [messages?.messages])
+	useEffect(() => {
+		messageRef?.current?.scrollIntoView({ behavior: 'smooth' })
+	}, [messages?.messages])
 
 	useEffect(() => {
 		const loggedInUser = JSON.parse(localStorage.getItem('user:detail'))
@@ -113,7 +113,7 @@ const Dashboard = () => {
 					</div>
 				</div>
 				<hr />
-				<div className='mx-14 mt-10'>
+				<div className='mx-14 mt-10 '>
 					<div className='text-primary text-lg'>Messages</div>
 					<div>
 						{
