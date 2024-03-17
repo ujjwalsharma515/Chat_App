@@ -54,8 +54,9 @@ const Dashboard = () => {
 		}
 		fetchConversations()
 	}, [])
+
 	const deleteConv = async (conversationId) => {
-		const res = await fetch(`http://localhost:8000/api/deleteConv/${conversationId}`, {
+		const res = await fetch(`https://chat-app-965j.onrender.com/api/deleteConv/${conversationId}`, {
 			method: 'DELETE',
 			headers: {
 				'Content-Type': 'application/json',
