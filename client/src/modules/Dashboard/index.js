@@ -63,7 +63,7 @@ const Dashboard = () => {
 			}
 		});
 		const resData = await res.json()
-			setConversations(resData)
+			setConversations(resData);
 	}
 	
 
@@ -138,7 +138,7 @@ const Dashboard = () => {
 												<div className='ml-6'>
 													<h3 className='text-lg font-semibold'>{user?.fullName}</h3>
 													<p className='text-sm font-light text-gray-600'>{user?.email}</p>
-													<p className='hover:bg-red-500 ' onClick={()=> deleteConv(conversationId)}>DEL</p>
+													<p className='hover:bg-red-500' onClick={()=> deleteConv(conversationId)}>DEL</p>
 												</div>
 											</div>
 										</div>
