@@ -221,6 +221,14 @@ app.get('/api/message/:conversationId', async (req, res) => {
         console.log('Error', error)
     }
 })
+app.delete('/api/deleteConv/:id',async(req, res) => {
+    
+    console.log(req.params.id)
+    const result = await Conversations.deleteOne({_id:req.params.id});
+   
+    
+    res.send("deleted")
+ })
 
 app.get('/api/users/:userId', async (req, res) => {
     try {

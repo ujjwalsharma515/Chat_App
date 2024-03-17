@@ -54,6 +54,17 @@ const Dashboard = () => {
 		}
 		fetchConversations()
 	}, [])
+	const deleteConv = async (conversationId) => {
+		const res = await fetch(`http://localhost:8000/api/deleteConv/${conversationId}`, {
+			method: 'DELETE',
+			headers: {
+				'Content-Type': 'application/json',
+			}
+		});
+		const resData = await res.json()
+			setConversations(resData)
+	}
+	
 
 	useEffect(() => {
 		const fetchUsers = async () => {
@@ -126,6 +137,7 @@ const Dashboard = () => {
 												<div className='ml-6'>
 													<h3 className='text-lg font-semibold'>{user?.fullName}</h3>
 													<p className='text-sm font-light text-gray-600'>{user?.email}</p>
+													<p className='hover:bg-red-500 text-xl text-bold' onClick={()=> deleteConv(conversationId)}>DEL</p>
 												</div>
 											</div>
 										</div>
