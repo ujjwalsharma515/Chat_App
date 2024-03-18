@@ -222,7 +222,7 @@ app.get('/api/message/:conversationId', async (req, res) => {
     }
 })
 
-app.delete('/api/deleteConv/:id', async(req, res) => {
+app.delete('/deleteConv/:id', async(req, res) => {
     
     console.log(req.params.id)
     const result = await Conversations.deleteOne({_id:req.params.id});
