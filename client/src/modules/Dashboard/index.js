@@ -19,7 +19,7 @@ const Dashboard = () => {
 	const messageRef = useRef(null)
 
 	useEffect(() => {
-		setSocket(io.connect());
+		setSocket(io('http://localhost:8080'))
 	}, [])
 
 	useEffect(() => {
