@@ -43,7 +43,7 @@ const Dashboard = () => {
 	useEffect(() => {
 		const loggedInUser = JSON.parse(localStorage.getItem('user:detail'))
 		const fetchConversations = async () => {
-			const res = await fetch(`https://chat-app-2-61tv.onrender.com/api/conversations/${loggedInUser?.id}`, {
+			const res = await fetch(`https://chat-app-4-9jcn.onrender.com/api/conversations/${loggedInUser?.id}`, {
 				method: 'GET',
 				headers: {
 					'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ const Dashboard = () => {
 	}, [])
 
 	const deleteConv = async (conversationId) => {
-		const res = await fetch(`https://chat-app-2-61tv.onrender.com/api/deleteConv/${conversationId}`, {
+		const res = await fetch(`https://chat-app-4-9jcn.onrender.com/api/deleteConv/${conversationId}`, {
 			method: 'DELETE',
 			headers: {
 				'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ const Dashboard = () => {
 
 	useEffect(() => {
 		const fetchUsers = async () => {
-			const res = await fetch(`https://chat-app-2-61tv.onrender.com/api/users/${user?.id}`, {
+			const res = await fetch(`https://chat-app-4-9jcn.onrender.com/api/users/${user?.id}`, {
 				method: 'GET',
 				headers: {
 					'Content-Type': 'application/json',
@@ -82,7 +82,7 @@ const Dashboard = () => {
 	}, [])
 
 	const fetchMessages = async (conversationId, receiver) => {
-		const res = await fetch(`https://chat-app-2-61tv.onrender.com/api/message/${conversationId}?senderId=${user?.id}&&receiverId=${receiver?.receiverId}`, {
+		const res = await fetch(`https://chat-app-4-9jcn.onrender.com/api/message/${conversationId}?senderId=${user?.id}&&receiverId=${receiver?.receiverId}`, {
 			method: 'GET',
 			headers: {
 				'Content-Type': 'application/json',
@@ -100,7 +100,7 @@ const Dashboard = () => {
 			message,
 			conversationId: messages?.conversationId
 		});
-		const res = await fetch(`https://chat-app-2-61tv.onrender.com/api/message`, {
+		const res = await fetch(`https://chat-app-4-9jcn.onrender.com/api/message`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
