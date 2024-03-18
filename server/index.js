@@ -5,13 +5,11 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const port1 = process.env.PORT;
 
-const { Server } = require("socket.io");
-const io = new Server(Server, {
+const io = require('socket.io')(8080, {
     cors: {
-      origin: 'http://localhost:3000',
-      methods:['GET','POST']
+        origin: 'http://localhost:3000',
     }
-  })
+});
 
 // const io = require('socket.io')(process.env.SOCKETIOPORT,{
 //     cors: {
@@ -248,4 +246,6 @@ if(process.env.NODE_ENV === "production"){
 // app.listen(port, () => {
 //     console.log('listening on port ' + port);
 // })
-http.listen(port, () => console.log(`Listening on port ${port}`));
+app.listen(port, () => {
+    console.log('listening on port ' + port);
+})
