@@ -19,8 +19,7 @@ const Dashboard = () => {
 	const messageRef = useRef(null)
 
 	useEffect(() => {
-		const socket1 = io();
-		socket1.connect();
+		io.connect();
 	}, [])
 
 	useEffect(() => {
