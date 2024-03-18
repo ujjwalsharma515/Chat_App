@@ -226,7 +226,7 @@ app.delete('/deleteConv/:id', async(req, res) => {
     
     console.log(req.params.id)
     const result = await Conversations.deleteOne({_id:req.params.id});
-    result.save();
+  
     res.send("deleted")
  })
 
