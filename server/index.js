@@ -4,10 +4,9 @@ const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const port1 = process.env.PORT;
-const http = require("http");
-const server = http.createServer(app);
+
 const { Server } = require("socket.io");
-const io = new Server(server, {
+const io = new Server(Server, {
     cors: {
       origin: 'http://localhost:3000',
       methods:['GET','POST']
