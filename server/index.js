@@ -1,15 +1,23 @@
 const express = require('express');
+const app = express();
 const dotenv = require('dotenv')
 const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const port1 = process.env.PORT;
-
-const io = require('socket.io')(8080,{
-    cors: {
-        origin:"*",
+var http = require("http").createServer(app);
+var socketIO = require("socket.io")(http,{
+    cors:{
+        origin:"*"
     }
-});
+})
+
+
+// const io = require('socket.io')(8080,{
+//     cors: {
+//         origin:"*",
+//     }
+// });
 
 // const io = require('socket.io')(process.env.SOCKETIOPORT,{
 //     cors: {
@@ -26,7 +34,7 @@ const Messages = require('./models/Messages');
 const { connect } = require('mongoose');
 
 // app Use
-const app = express();
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
@@ -247,6 +255,6 @@ if(process.env.NODE_ENV === "production"){
 // app.listen(port, () => {
 //     console.log('listening on port ' + port);
 // })
-app.listen(port, () => {
+http.listen(port, () => {
     console.log('listening on port ' + port);
 })
