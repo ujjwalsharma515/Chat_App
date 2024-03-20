@@ -6,11 +6,11 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const port1 = process.env.PORT;
 var http = require("http").createServer(app);
-var io = require("socket.io")(8080,{
-    cors:{
-        origin:"*"
-    }
-})
+// var io = require("socket.io")(http,{
+//     cors:{
+//         origin:
+//     }
+// })
 
 
 // const io = require('socket.io')(8080,{
@@ -19,11 +19,11 @@ var io = require("socket.io")(8080,{
 //     }
 // });
 
-// const io = require('socket.io')(process.env.SOCKETIOPORT,{
-//     cors: {
-//         origin: `http://localhost:${port1}`,
-//     }
-// });
+const io = require('socket.io')(process.env.SOCKETIOPORT,{
+    cors: {
+        origin: `http://localhost:${port1}`,
+    }
+});
 // Connect DB
 require('./db/connection');
 
