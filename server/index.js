@@ -18,6 +18,7 @@ var http = require("http").createServer(app);
 //         origin:"*",
 //     }
 // });
+app.use(cors());
 
 const io = require('socket.io')(process.env.SOCKETIOPORT,{
     cors: {
