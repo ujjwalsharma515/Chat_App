@@ -6,7 +6,7 @@ import onlineimg from '../../assets/onlineimg.png'
 import itsme from '../../assets/itsme.jpg'
 import Input from '../../components/Input'
 import { io } from 'socket.io-client'
-
+import { MdDelete } from "react-icons/md";
 
 
 const Dashboard = () => {
@@ -137,7 +137,8 @@ const Dashboard = () => {
 												<div className='ml-6'>
 													<h3 className='text-lg font-semibold'>{user?.fullName}</h3>
 													<p className='text-sm font-light text-gray-600'>{user?.email}</p>
-													<p className='hover:bg-red-500' onClick={() => deleteConvo(conversationId)}>DEL</p>
+													<MdDelete className='left-0' onClick={()=> deleteConv(conversationId)} />
+
 												</div>
 											</div>
 										</div>
