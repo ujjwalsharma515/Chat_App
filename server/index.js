@@ -19,7 +19,6 @@ var http = require("http").createServer(app);
 //     }
 // });
 
-
 const io = require('socket.io')(process.env.SOCKETIOPORT,{
     cors: {
         origin: `http://localhost:${port1}`,
@@ -234,7 +233,7 @@ app.delete('/api/deleteConv/:id',async(req, res) => {
     console.log(req.params.id)
     const result = await Conversations.deleteOne({_id:req.params.id});
     
-    res.send("deleted")
+    res.alert("deleted").send("deleted")
  })
 
 
