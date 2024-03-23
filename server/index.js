@@ -3,17 +3,14 @@ const app = express();
 const dotenv = require('dotenv')
 const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-// const cors = require('cors');
+const cors = require('cors');
 const port1 = process.env.PORT;
 var http = require("http").createServer(app);
-
-const cors = require('cors');
-const corsOptions ={
-    origin:'http://localhost:3000', 
-    credentials:true,            //access-control-allow-credentials:true
-    optionSuccessStatus:200
-}
-app.use(cors(corsOptions));
+// var io = require("socket.io")(http,{
+//     cors:{
+//         origin:
+//     }
+// })
 
 
 // const io = require('socket.io')(8080,{
@@ -21,7 +18,7 @@ app.use(cors(corsOptions));
 //         origin:"*",
 //     }
 // });
-// app.use(cors());
+
 
 const io = require('socket.io')(process.env.SOCKETIOPORT,{
     cors: {
