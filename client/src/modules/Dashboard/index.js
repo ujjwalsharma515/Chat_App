@@ -138,6 +138,7 @@ const Dashboard = () => {
 													<h3 className='text-lg font-semibold'>{user?.fullName}</h3>
 													<p className='text-sm font-light text-gray-600'>{user?.email}</p>
 													<MdDelete className='left-0' onClick={()=> deleteConvo(conversationId)}/>
+													<MdDelete />
 
 												</div>
 											</div>
